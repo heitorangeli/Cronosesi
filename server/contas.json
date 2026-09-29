@@ -1,0 +1,14 @@
+[
+    {
+        "rm": 1111,
+        "nome": "teste",
+        "email": "teste@portalsesisp.org.br",
+        "senha": "sesi@1234"
+    },
+    {
+        "rm": 9475,
+        "nome": "Eduardo Moretti",
+        "email": "eduardo.varotti@portalsesisp.org.br",
+        "senha": "sesi@9475"
+    }
+]

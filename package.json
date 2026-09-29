@@ -1,0 +1,17 @@
+{
+  "name": "cronosesi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server/server.js"
+  },
+  "keywords": [],
+  "author": "Leandro, Heitor, Eduardo e Otávio",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

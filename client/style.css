@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    height: 40vh;  
+}
+.faixa-esquerda {
+  border-right: 2px solid orangered;
+  height: 200px;
+  width: 40px;
+  margin-right: 50px;
+}
+.faixa-direita {
+  border-left: 2px solid orangered;
+  height: 200px;
+  width: 40px;
+  margin-left: 50px;
+}
+.email{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 50px;
+}
+.senha{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 30px;
+}
+body{
+    width: 1500px;
+    height: auto;
+}
