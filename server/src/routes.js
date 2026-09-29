@@ -1,10 +1,8 @@
 const express = require("express")
 const router = express.Router();
 
-const search = require("./controllers")
-const compare = require("./controllers")
+const { search } = require("./controllers");
 
-router.post("/bens",create)
-router.get("/bens",read)
+router.post("/contas", search)
 
 module.exports = router

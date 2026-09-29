@@ -1,24 +1,34 @@
-const bens = require("../bens.json")
+const contas = require("../contas.json")
 
 function autoIncremet(){
-    const ultimoId = Number(bens[bens.length - 1].id)
+    const ultimoId = Number(contas[contas.length - 1].id)
     return ultimoId + 1;
 }
 
 //CRUDS
-const create = (req, res)=>{
+const search = (req, res) => {
+    var find = 0;
+    var rightPassword = 0;
     const dados = req.body
-    dados.id = autoIncremet()
-    bens.push(dados)
-    // res.status(201).json(dados)
-    res.redirect("http://127.0.0.1:5500/client/index.html")
-}
-
-const read = (req, res)=>{
-    res.json(bens)
+    contas.forEach(conta => {
+        if( conta.email === dados.email){
+            find = 1;
+            if( conta.senha === dados.senha){
+                rightPassword = 1;
+            }else{
+                console.log("Senha incorreta")
+            }
+    }})
+    if (find === 1 && rightPassword === 1) {
+        console.log("Login realizado com sucesso")}
+    else if (find === 1 && rightPassword === 0) {
+        console.log("Senha incorreta")}
+    else{
+        console.log("Email não encontrado")
+    }
+    // res.redirect("http://localhost:5500/client/index.html")
 }
 
 module.exports = {
-    create,
-    read
+    search,
 }
