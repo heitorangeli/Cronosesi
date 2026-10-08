@@ -1,9 +1,7 @@
-const contas = require("../contas.json")
+const contas = require("./dados.json")
 
-exports.salvarDados = (req, res) => {
-    const dados = {"email":req.body.email, "senha":req.body.senha};
-}
 const search = (req, res) => {
+    const dados = {"email":req.body.email, "senha":req.body.senha};
     var find = 0;
     var rightPassword = 0;
     contas.forEach(conta => {
@@ -16,13 +14,14 @@ const search = (req, res) => {
             }
     }})
     if (find === 1 && rightPassword === 1) {
+        res.redirect("http://127.0.0.1:5500/client/home.html")
         console.log("Login realizado com sucesso")}
     else if (find === 1 && rightPassword === 0) {
         console.log("Senha incorreta")}
     else{
         console.log("Email não encontrado")
+        status=1
     }
-    res.redirect("http://127.0.0.1:5500/client/home.html")
 }
 
 module.exports = {
