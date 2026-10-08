@@ -10,5 +10,11 @@
         "nome": "Eduardo Moretti",
         "email": "eduardo.varotti@portalsesisp.org.br",
         "senha": "sesi@9475"
+    },
+    {
+        "rm": 1234,
+        "nome": "Eduardo Moretti",
+        "email": "a",
+        "senha": "b"
     }
 ]

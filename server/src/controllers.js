@@ -1,15 +1,11 @@
 const contas = require("../contas.json")
 
-function autoIncremet(){
-    const ultimoId = Number(contas[contas.length - 1].id)
-    return ultimoId + 1;
+exports.salvarDados = (req, res) => {
+    const dados = {"email":req.body.email, "senha":req.body.senha};
 }
-
-//CRUDS
 const search = (req, res) => {
     var find = 0;
     var rightPassword = 0;
-    const dados = req.body
     contas.forEach(conta => {
         if( conta.email === dados.email){
             find = 1;
@@ -26,9 +22,9 @@ const search = (req, res) => {
     else{
         console.log("Email não encontrado")
     }
-    // res.redirect("http://localhost:5500/client/index.html")
+    res.redirect("http://127.0.0.1:5500/client/home.html")
 }
 
 module.exports = {
-    search,
+    search
 }

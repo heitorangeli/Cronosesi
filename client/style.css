@@ -25,12 +25,12 @@
   flex-shrink: 0;
   border: 3px solid darkred;
   background-image: repeating-linear-gradient(
-    45deg,
+    135deg,
     transparent,
     transparent 20px,
     rgba(255, 255, 255, 0.4) 20px,
     rgba(255, 255, 255, 0.4) 23px
-  );
+    );
 }
 
 .faixa-direita {
@@ -40,7 +40,6 @@
   padding: 20px;
   min-height: 50vh;
   flex-shrink: 0;
-  border:  black;
   border: 3px solid darkred;
   background-image: repeating-linear-gradient(
     45deg,
@@ -92,8 +91,14 @@ body{
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.botao button:hover{
+    transform: scale(1.02);
 }
 .botao button:active{
-    background: #ff1d0d;
-    background: linear-gradient(90deg, rgba(255, 29, 13, 1) 0%, rgba(255, 170, 13, 1) 100%);
+    transform: scale(0.96);
+}
+a {
+    text-decoration: none;
 }

@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="photos/cronometro.ico">
   <title>CRONOSesi</title>
 </head>
 <body>
@@ -12,23 +14,30 @@
     <aside class="faixa-esquerda"></aside>
 
     <main class="conteudo-principal">
-      <form action="http://localhost:3000">
+      <form action="salvarDados" method ="post">
         
         <div class="img">
           <img src="/client/photos/cronosesi.png" alt="Logo CRONOSesi">
         </div>
         <div class="login">
           <div class="email">
-            <input type="text" placeholder="Email educacional">
+            <input type="text" placeholder="Email educacional" name="email">
           </div>
 
           <div class="senha">
-            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Senha" name="senha">
           </div>
         </div>
         <div class="botao">
-          <button type="submit">Login</button>
+            <a href="home.html">
+            <button type="submit">Login</button>
+            </a>
         </div>
+        <script>
+          function verificar() {
+
+          }
+        </script>
       </form>
     </main>
 
