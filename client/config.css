@@ -1,0 +1,163 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url('fonts/Bungee-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: #e0e0e0;
+  padding: 10px 30px;
+  height: 70px;
+  border-bottom: 3px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-espaco {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 200px;
+  height: auto;
+  background: linear-gradient(135deg, #f73131, #f72a2a);
+  padding: 8px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  object-fit: contain;
+}
+
+.nav-icones {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+button i {
+  display: flex;
+  font-size: 35px;
+  color: red;
+}
+
+.config-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.config-title {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.config-card {
+  background-color: #ffffff;
+  border: 3px solid #ff0000;
+  border-radius: 16px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.config-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+.config-card h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+}
+
+.config-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.btn-action {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.btn-action:hover {
+  background-color: #cc0000;
+}
+
+footer {
+  width: 100%;
+  background-color: #e6e6e6;
+  text-align: center;
+  padding: 15px 0;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="config.css">
+    <link rel="icon" href="photos/cronometro.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Configurações</title>
+</head>
+<body>
+    
+  <header>
+    <nav class="navbar">
+      <div class="nav-espaco">
+        <button type="button" class="icon-btn" title="Voltar" onclick="history.back()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+      </div>
+
+      <div class="nav-logo">
+        <span><img src="photos/sesiampulheta.png" alt="Logo SESI"></span>
+      </div>
+
+      <div class="nav-icones">
+        <!-- Mantido para equilibrar o Grid -->
+      </div>
+    </nav>
+  </header>
+
+  <main class="config-container">
+    <h1 class="config-title">Configurações do Sistema</h1>
+
+    <div class="config-grid">
+      <div class="config-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+        <h2>Tema Visual</h2>
+        <p>Alterne entre o modo claro e o modo escuro do sistema.</p>
+        <button type="button" class="btn-action" onclick="toggleTheme()">Alternar Tema</button>
+      </div>
+
+      <div class="config-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <h2>Notificações</h2>
+        <p>Gerencie as preferências de som e alertas visuais.</p>
+        <button type="button" class="btn-action" onclick="toggleNotifications()">Ativar / Desativar</button>
+      </div>
+
+      <div class="config-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h2>Segurança</h2>
+        <p>Altere sua senha de acesso e verificação em dois fatores.</p>
+        <button type="button" class="btn-action" onclick="changePassword()">Alterar Senha</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© CRONOSesi - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

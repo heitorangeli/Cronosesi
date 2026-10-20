@@ -1,14 +1,13 @@
 const db = require("./db")
 
 const search = (req, res) => {
-    console.log("Dados recebidos do front-end:", req.body);
 
-    const emailDigitado = req.body.email;
-    const senhaDigitada = req.body.senha;
+    const email = req.body.email;
+    const senha = req.body.senha;
 
     const query = 'SELECT * FROM aluno WHERE email = ?';
 
-    db.query(query, [emailDigitado], (err, results) => {
+    db.query(query, [email], (err, results) => {
         if (err) {
             console.error("Erro na consulta ao banco:", err);
             return res.status(500).send("Erro interno no servidor");
@@ -21,13 +20,13 @@ const search = (req, res) => {
             return res.status(401).send("Email não encontrado");
         }
 
-        const alunoEncontrado = results[0];
+        const aluno = results[0];
 
-        if (alunoEncontrado.senha === senhaDigitada) {
-            console.log("Login realizado com sucesso!");
+        if (aluno.senha === senha) {
+            console.log("Login realizado com sucesso");
             return res.redirect("http://127.0.0.1:5500/client/home.html");
         } else {
-            console.log("Senha incorreta!");
+            console.log("Senha incorreta");
             return res.status(401).send("Senha incorreta");
         }
     });
