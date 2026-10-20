@@ -152,7 +152,9 @@ insert into aluno (rm, nome, email, senha, turma, ano) values
 select * from aluno;
 ```
 
-## Prints do MER DER
-
 ## Prints do site
 <img src="client/photos/printlogin.png">
+
+## Prints do MER DER
+<img src="client/photos/merderlogico.png">
+<img src="client/photos/merder.png">
