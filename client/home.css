@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Bungee';
+  src: url('fonts/Bungee-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -53,8 +61,8 @@
 }
 .box{
     background-color: red;
-    width: 400px;
-    height: 300px;
+    width: 350px;
+    height: 285px;
     border-radius: 20px;
     padding: 20px;
     min-height: 220px;
@@ -74,8 +82,11 @@
 .box h2{
     display: flex;
     justify-content: center;
+    color: white;
+    font-family: bungee;
 }
 .box img{
     width: 350px;
     height: 230px;
+    padding: 15px;
 }

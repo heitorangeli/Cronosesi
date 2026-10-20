@@ -106,45 +106,50 @@ module.exports = {
 
 - SQL
 ```sql
-drop database if exists registros_climaticos;
-create database registros_climaticos;
-use registros_climaticos;
--- DDL para criar as tabelas do banco de dados
-create table usuario (
-    id int not null auto_increment primary key,
-    nome varchar(100) not null,
-    email varchar(100) not null unique,
-    senha varchar(100) not null
+DROP DATABASE if exists cronosesi;
+CREATE DATABASE cronosesi;
+USE cronosesi;
+
+CREATE TABLE aluno(
+    rm int(4) not null primary key,
+    nome varchar(100) not null,
+    email varchar(100) not null unique,
+    senha varchar(10) not null,
+    turma varchar(1) not null,
+    ano int (2) not null
 );
 
-create table evento (
-    id int not null auto_increment primary key,
-    usuarioId int not null,
-    cidade varchar(100) not null,
-    tipoEvento varchar(100) not null,
-    temperaturaMaxima decimal(10,2) not null,
-    data date not null,
-    nivelImpacto enum('Baixo', 'Médio', 'Alto') default 'Médio' not null
+CREATE TABLE calendario(
+    id int primary key auto_increment,
+    id_grupo int,
+    turma_aluno varchar(2) not null,
+    data date not null,
+    atividades varchar(100),
+    feriados varchar(100) not null
 );
 
-alter table evento add
-constraint fk_registra foreign key (usuarioId) references usuario(id);
+CREATE TABLE grupo(
+    id int not null primary key auto_increment,
+    RM_aluno int(4) not null,
+    nome varchar(100) not null,
+    conversas varchar(100),
+    etiqueta enum('Iniciante', 'Mentor') not null
+);
 
--- DML para inserir dados de exemplo nas tabelas
-insert into usuario (nome, email, senha) values
-('Maria Oliveira', 'maria.oliveira@email.com', password('senha123')),
-('João Silva', 'joao.silva@email.com', password('senha123')),
-('Ana Souza', 'ana.souza@email.com', password('senha123'));
+CREATE TABLE suporte(
+    id int not null primary key auto_increment,
+    RM_aluno int(4) not null,
+    conversas varchar(100)
+);
 
-insert into evento (usuarioId, cidade, tipoEvento, temperaturaMaxima, data, nivelImpacto) values
-(1, 'Campinas', 'Onda de calor', 38.7, '2026-09-23', 'Alto'),
-(2, 'São Paulo', 'Chuva intensa', 25.3, '2026-09-24', 'Médio'),
-(1, 'Rio de Janeiro', 'Tempestade', 30.1, '2026-09-25', 'Alto'),
-(2, 'Belo Horizonte', 'Seca prolongada', 35.0, '2026-09-26', 'Alto'),
-(3, 'Porto Alegre', 'Nevasca', -2.5, '2026-09-27', 'Médio');
+alter table calendario add constraint id_grupo foreign key (id_grupo) references grupo(id);
+alter table grupo add constraint grupo_aluno foreign key (RM_aluno) references aluno(rm);
+alter table suporte add constraint suporte_aluno foreign key (RM_aluno) references aluno(rm);
 
-select * from usuario;
-select * from evento;
+insert into aluno (rm, nome, email, senha, turma, ano) values
+(6767, 'Aura Dias', 'aura.dia@gmail.com', password('aura67'), 'A', 2);
+
+select * from aluno;
 ```
 
 

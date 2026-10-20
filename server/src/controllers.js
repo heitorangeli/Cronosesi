@@ -1,4 +1,4 @@
-const contas = require("./dados.json")
+const contas = require("./db")
 
 const search = (req, res) => {
     const dados = {"email":req.body.email, "senha":req.body.senha};
