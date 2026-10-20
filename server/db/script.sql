@@ -7,7 +7,7 @@ CREATE TABLE aluno(
     nome varchar(100) not null,
     email varchar(100) not null unique,
     senha varchar(10) not null,
-    turma varchar(1) not null,
+    turma varchar(2) not null,
     ano int (2) not null
 );
 
@@ -39,6 +39,6 @@ alter table grupo add constraint grupo_aluno foreign key (RM_aluno) references a
 alter table suporte add constraint suporte_aluno foreign key (RM_aluno) references aluno(rm);
 
 insert into aluno (rm, nome, email, senha, turma, ano) values
-(6767, 'Aura Dias', 'a', password('b'), 'A', 2);
+(6767, 'Aura Dias', 'a', 'b', 'A', 2);
 
 select * from aluno;
