@@ -61,20 +61,20 @@
   gap: 15px;
 }
 
-.icon-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
+    .icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    }
 
-.icon {
-    width: 30px;
-    height: 30px;
-}
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
 .nav-icones img{
     width: 50px;
     height: auto;

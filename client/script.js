@@ -1,13 +1,6 @@
-const email = document.querySelector("#email")
-const senha = document.querySelector("#senha")
-const botao = document.querySelector("#botao")
-const erro = document.querySelector("#erro")
+const form = document.getElementById("login")
+const mensagem_erro = document.getElementById("erro")
 
-botao.addEventListener("click", function(){
-    if(email == ){
-        erro.textContent = `Email incorreto`
-    }
-    if(senha == ){
-        erro.textContent = `Senha incorreta`
-    }
-});
+form.addEventListener("submit", async function name(params) {
+    
+})
