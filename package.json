@@ -1,5 +1,5 @@
 {
-  "name": "cronosesi",
+  "name": "CRONOSesi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "dev": "node server/server.js"
   },
   "keywords": [],
-  "author": "Leandro, Heitor, Eduardo e Otávio",
+  "author": "LeandroImenes - heitorangeli - eduardomorettiv - esfignomamometro",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

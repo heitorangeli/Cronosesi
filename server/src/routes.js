@@ -1,7 +1,7 @@
 const express = require("express")
-const router = express.Router();
+const router = express.Router()
 
-const { search } = require("./controllers");
+const { search } = require("./controllers")
 
 router.post('/login', search)
 

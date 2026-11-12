@@ -5,11 +5,11 @@
 }
 
 @font-face {
-  font-family: 'Bungee';
-  src: url('fonts/Bungee-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Bungee';
+    src: url('fonts/Bungee-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .navbar {
@@ -26,9 +26,9 @@
 }
 
 .nav-espaco {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .nav-logo img {
@@ -39,29 +39,29 @@
     font-weight: bold;
     padding: 8px 35px;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 200px;
 }
 
 .nav-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-espaco,
 .nav-icones {
-  flex: 1;
+    flex: 1;
 }
 
 .nav-icones {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
 }
 
-    .icon-btn {
+.icon-btn {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -69,17 +69,19 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    }
+}
 
-    .icon {
-        width: 30px;
-        height: 30px;
-    }
-.nav-icones img{
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-icones img {
     width: 50px;
     height: auto;
 }
-.box{
+
+.box {
     background-color: red;
     width: 350px;
     height: 285px;
@@ -87,46 +89,57 @@
     padding: 20px;
     min-height: 220px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 3px solid #361111;    
+    border: 3px solid #361111;
 }
+
 .container-box {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 80px;
 }
-.box-header{
+
+.box-header {
     display: flex;
     justify-content: center;
 }
-.box h2{
+
+.box h2 {
     display: flex;
     justify-content: center;
     color: white;
     font-family: bungee;
 }
-.box img{
+
+.box img {
     width: 350px;
     height: 230px;
     padding: 15px;
     border-radius: 20px;
 }
-button i{
+
+button i {
     display: flex;
     font-size: 35px;
     color: red;
 }
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ff0000;
-  text-align: center;
-  padding: 10px 0;
-  z-index: 1000;
-  border-top: 2px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff0000;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    border-top: 2px solid black;
 }
-footer p{
+
+footer p {
     color: white;
+}
+
+a{
+    text-decoration: none;
 }

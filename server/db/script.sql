@@ -40,5 +40,7 @@ alter table suporte add constraint suporte_aluno foreign key (RM_aluno) referenc
 
 insert into aluno (rm, nome, email, senha, turma, ano) values
 (6767, 'Aura Dias', 'a', 'b', 'A', 2);
+(8888, 'Lydia', 'lydia@email.com', '88guaravitons', 'A', 2);
+(4242, 'Virtuvioso', 'virtu@email.com', 'b', 'B', 3);
 
 select * from aluno;

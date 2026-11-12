@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #121214;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url('fonts/Bungee-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.faixa-horizontal {
+  width: 100%;
+  height: 25px;
+  background-color: #e30613;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 15px,
+    rgba(255, 255, 255, 0.2) 15px,
+    rgba(255, 255, 255, 0.2) 30px
+  );
+  border-top: 2px solid #b5040e;
+  border-bottom: 2px solid #b5040e;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#month-title {
+  font-family: 'Bungee', Arial, sans-serif;
+  color: #e30613;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.day-card {
+  background-color: #ffffff;
+  border: 3px solid #e30613;
+  border-radius: 16px;
+  padding: 25px 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.empty-card {
+  visibility: hidden;
+}
+
+.day-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Bungee', Arial, sans-serif;
+  color: #333333;
+}
+
+.day-card.today {
+  border-color: #b5040e;
+  background-color: #e30613;
+}
+
+.day-card.today .day-number {
+  color: #ffffff;
+}
+
+.day-dialog {
+  padding: 30px;
+  border-radius: 16px;
+  border: 3px solid #e30613;
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.day-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-title {
+  font-family: 'Bungee', Arial, sans-serif;
+  color: #e30613;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background-color: #e30613;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Bungee', Arial, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.close-btn:hover {
+  background-color: #b5040e;
+}
